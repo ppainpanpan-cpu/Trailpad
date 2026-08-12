@@ -2,12 +2,27 @@ window.addEventListener('DOMContentLoaded', () => {
   const STORAGE_KEY = 'trailpad_1';
   const PROFILE_COUNT = 8;
 
-  const map = Object.fromEntries([
-    "A", "B", "X", "Y",
-    "LB", "RB", "LT", "RT",
-    "View", "Menu", "LS", "RS",
-    "Up", "Down", "Left", "Right"
-  ].map((k, i) => [k, i]));
+const map = {
+    A: 0,
+    B: 1,
+    X: 2,
+    Y: 3,
+
+    LB: 11, // R3でドライブインパクト表示
+    RB: 5,
+    LT: 10, // L3でパリィ表示
+    RT: 7,
+
+    View: 8,
+    Menu: 9,
+    LS: 10,
+    RS: 11,
+
+    Up: 12,
+    Down: 13,
+    Left: 14,
+    Right: 15
+};
 
   const cfg = { deadzone: 0.1, trail: 8, invertY: false, ignoredForJoystick: ['View', 'Menu', 'Up', 'Down', 'Left', 'Right'] };
 
